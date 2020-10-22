@@ -9,12 +9,20 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.7.6",
+    "@react-navigation/stack": "^5.9.3",
     "@types/react-redux": "^7.1.9",
     "expo": "~39.0.2",
+    "expo-font": "^8.3.0",
     "expo-status-bar": "~1.0.2",
     "react": "^16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
+    "react-native-gesture-handler": "^1.7.0",
+    "react-native-reanimated": "^1.13.1",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-screens": "^2.10.1",
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5"
