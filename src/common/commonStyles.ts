@@ -8,7 +8,13 @@ export const commonStyles = StyleSheet.create({
   },
   loginPage: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+  },
+  loginPageImage: {
+    width: '100%', 
+    height: '100%', 
+    position: 'absolute',
+     zIndex: -1
   },
   logoTitleTextContainer: {
     marginTop: 101

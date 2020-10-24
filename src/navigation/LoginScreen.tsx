@@ -1,5 +1,5 @@
 import React from 'react';
-import { Login } from '../core/login/Login';
+import { Login } from '../core/Login/Login';
 import { useNavigation } from '@react-navigation/native';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 

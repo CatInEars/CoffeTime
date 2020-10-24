@@ -1,14 +1,21 @@
 import React from 'react';
-import { ImageBackground } from 'react-native';
+import { Image } from 'react-native';
 import { Logo } from './Logo';
 import { commonStyles } from '../../common/commonStyles';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export function Login() {
   const image = require('../../../images/registr_background.png');
   
   return (
-    <ImageBackground style={commonStyles.loginPage} source={image}>
+    <LinearGradient 
+      colors={['transparent', 'rgba(243,233,216,0.85)']} 
+      locations={[0.45, 1]} 
+      style={commonStyles.loginPage}
+    >
       <Logo />
-    </ImageBackground>
-  )
+      <Image source={image} style={commonStyles.loginPageImage} />
+      
+    </LinearGradient>
+  );
 }
