@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Animated, PanResponder, Text, Image} from 'react-native';
+import { SwiperText } from './SwiperText';
+import { SwipersButton } from './SwipersButton';
 import { commonStyles } from '../../common/commonStyles';
 import { buttonsArr } from '../../modules/data/buttonsArr';
 import { IButtons } from '../../types/data/IButtons';
@@ -92,78 +94,22 @@ export function ButtonSwiper() {
 
   return (
     <View style={commonStyles.buttonSwiper}>
-      <Animated.View
-        style={{
-          ...commonStyles.buttonSwiperSwiperElement,
-          transform: [{translateY: pan.y}],
-          opacity: fadeOut.interpolate({
-            inputRange: [0, 1],
-            outputRange: [1, 0]
-          })
-        }}
-
-        {...panResponder.panHandlers}
-      >
-        <Animated.View 
-          style={
-            {
-              ...commonStyles.buttonSwiperTextLineContainer,
-              bottom: 
-                swipeControll ? 
-                    fadeOut.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [56, 100]
-                    })
-                  : bottomInterval.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [48, 64]
-                  })
-
-            }
-          }
-        >
-          <View style={commonStyles.buttonSwiperTextContainer}>
-            <Text style={{
-                ...commonStyles.buttonSwiperText,
-                fontFamily: 'SFUITextLight'
-              }
-            }>
-              Проведите вверх
-            </Text>
-          </View>
-
-          <View style={{...commonStyles.buttonSwiperLine}} />
-        </Animated.View>
-      </Animated.View>
+      <SwiperText 
+        fadeOut={fadeOut}
+        panResponder={panResponder}
+        swipeControll={swipeControll}
+        bottomInterval={bottomInterval} 
+        pan={pan}
+      />
 
       {
         buttonsArr.map((item: IButtons, index: number) => {
           return (
-            <Animated.View
-              style={
-                {
-                  ...commonStyles.buttonSwiper_Buttons,
-                  bottom: buttonContainerScroll.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [-300, 300]
-                  }),
-                  backgroundColor: item.backgroundColor
-                }
-              }
-              key={index}
-            >
-              {item.image !== null && <Image source={item.image} style={{width: item.imageWidth, height: item.imageHeight}} />}
-              <Text
-                style={
-                  {
-                    ...commonStyles.facebookButtonText,
-                    color: item.textColor
-                  }
-                }
-              >
-                {item.title}
-              </Text>
-            </Animated.View>
+            <SwipersButton 
+              item={item}
+              index={index}
+              buttonContainerScroll={buttonContainerScroll}
+            />
           );
         })
       }
