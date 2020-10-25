@@ -9,12 +9,13 @@ export const commonStyles = StyleSheet.create({
   loginPage: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'space-between'
   },
   loginPageImage: {
     width: '100%', 
     height: '100%', 
     position: 'absolute',
-     zIndex: -1
+    zIndex: -1
   },
   logoTitleTextContainer: {
     marginTop: 101
@@ -30,5 +31,47 @@ export const commonStyles = StyleSheet.create({
   logoLightText: {
     color: 'white',
     fontSize: 16
+  },
+  buttonSwiper: { 
+    width: '100%', 
+    height: '60%',
+    alignItems: 'center'
+  },
+  buttonSwiperSwiperElement: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+  },
+  buttonSwiperTextLineContainer: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'flex-end'
+  },
+  buttonSwiperTextContainer: {
+    position: 'relative'
+  },
+  buttonSwiperText: {
+    color: 'white',
+    fontSize: 24,
+    marginBottom: 8
+  },
+  buttonSwiperLine: {
+    width: 140,
+    height: 3,
+    backgroundColor: 'white'
+  },
+  buttonSwiper_Buttons: {
+    width: 300,
+    height: 52,
+    borderRadius: 100,
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    flexDirection: 'row',
+    marginTop: 16
+  },
+  facebookButtonText: {
+    fontSize: 18, 
+    fontFamily: 'SFUITextLight', 
+    color: 'white'
   }
 });

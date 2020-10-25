@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native';
 import { Logo } from './Logo';
+import { ButtonSwiper } from './ButtonSwiper';
 import { commonStyles } from '../../common/commonStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -15,7 +16,8 @@ export function Login() {
     >
       <Logo />
       <Image source={image} style={commonStyles.loginPageImage} />
-      
+      <ButtonSwiper />
+
     </LinearGradient>
   );
 }
