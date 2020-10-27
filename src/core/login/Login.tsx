@@ -10,6 +10,7 @@ export function Login() {
   
   return (
     
+    
     <LinearGradient 
       colors={['transparent', 'rgba(243,233,216,0.85)']} 
       locations={[0.45, 1]} 
