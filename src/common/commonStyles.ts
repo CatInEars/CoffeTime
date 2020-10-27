@@ -32,7 +32,7 @@ export const commonStyles = StyleSheet.create({
     color: 'white',
     fontSize: 16
   },
-  buttonSwiper: { 
+  swiperElementsContainer: { 
     width: '100%', 
     height: '60%',
     alignItems: 'center'

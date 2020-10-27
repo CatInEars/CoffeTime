@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native';
 import { Logo } from './Logo';
-import { ButtonSwiper } from './ButtonSwiper';
+import { ButtonSwiper } from './SwiperElements';
 import { commonStyles } from '../../common/commonStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 

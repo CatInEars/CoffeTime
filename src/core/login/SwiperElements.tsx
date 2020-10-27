@@ -9,6 +9,7 @@ import { IButtons } from '../../types/data/IButtons';
 export function ButtonSwiper() {
   const [bottomChecker, setBottomChecker] = useState(true);
   const [swipeControll, setSwipeControll] = useState(false);
+  const [isButtonsOpen, setButtonsOpen] = useState(false);
 
   const bottomInterval = useRef(new Animated.Value(0)).current;
   const pan = useRef(new Animated.ValueXY()).current;
@@ -28,22 +29,8 @@ export function ButtonSwiper() {
         vy = vy * -1;
         dy = dy * -1;
         
-        if (dy >= 200) {
-
-          setSwipeControll(true);
-          Animated.timing(fadeOut, {
-            toValue: 1,
-            duration: 200,
-            useNativeDriver: false
-          }).start();
-          Animated.spring(buttonContainerScroll, {
-            toValue: 1,
-            useNativeDriver: false,
-            bounciness: 10
-          }).start();
-
-        } else if (dy > 100 && vy > 0.3) {
-
+        if (dy > 100 && vy > 0.3) {
+          
           setSwipeControll(true);
           Animated.timing(fadeOut, {
             toValue: 1,
@@ -69,38 +56,35 @@ export function ButtonSwiper() {
   ).current;
 
   useEffect(() => {
-    if (bottomChecker) {
+    if ( isButtonsOpen ) return;
 
+    if (bottomChecker) {
       Animated.timing(bottomInterval, {
         toValue: 1,
         duration: 2500,
         useNativeDriver: false
       }).start(() => setBottomChecker(false) );
-
     } else {
-
       Animated.timing(bottomInterval, {
         toValue: 0,
         duration: 2500,
         useNativeDriver: false
       }).start(() => setBottomChecker(true));
-
     }
-
-    return () => {
-      //TODO
-    }
-  }, [bottomChecker]);
+  }, [bottomChecker, isButtonsOpen]);
 
   return (
-    <View style={commonStyles.buttonSwiper}>
-      <SwiperText 
-        fadeOut={fadeOut}
-        panResponder={panResponder}
-        swipeControll={swipeControll}
-        bottomInterval={bottomInterval} 
-        pan={pan}
-      />
+    <View style={commonStyles.swiperElementsContainer}>
+      {
+        !isButtonsOpen &&
+        <SwiperText 
+          fadeOut={fadeOut}
+          panResponder={panResponder}
+          swipeControll={swipeControll}
+          bottomInterval={bottomInterval} 
+          pan={pan}
+        />
+      }
 
       {
         buttonsArr.map((item: IButtons, index: number) => {
