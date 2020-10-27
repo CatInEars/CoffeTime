@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, Animated, PanResponder, Text, Image} from 'react-native';
+import { View, Animated, PanResponder } from 'react-native';
 import { SwiperText } from './SwiperText';
 import { SwipersButton } from './SwipersButton';
 import { commonStyles } from '../../common/commonStyles';
@@ -29,7 +29,7 @@ export function ButtonSwiper() {
         vy = vy * -1;
         dy = dy * -1;
         
-        if (dy > 100 && vy > 0.3) {
+        if ((dy > 100 && vy > 0.3) || dy > 200) {
           
           setSwipeControll(true);
           Animated.timing(fadeOut, {
@@ -41,7 +41,9 @@ export function ButtonSwiper() {
             toValue: 1,
             useNativeDriver: false,
             bounciness: 9
-          }).start();
+          }).start(() => {
+            setButtonsOpen(true);
+          });
           
         } else {
 
@@ -86,17 +88,29 @@ export function ButtonSwiper() {
         />
       }
 
-      {
-        buttonsArr.map((item: IButtons, index: number) => {
-          return (
-            <SwipersButton 
-              item={item}
-              index={index}
-              buttonContainerScroll={buttonContainerScroll}
-            />
-          );
-        })
-      }
+      <Animated.View
+        style={
+          {
+            ...commonStyles.swiperElementsButtonsContainer,
+            bottom: buttonContainerScroll.interpolate({
+              inputRange: [0, 1],
+              //TODO
+              outputRange: [-215, 100]
+            })
+          }
+        }
+      >
+        {
+          buttonsArr.map((item: IButtons, index: number) => {
+            return (
+              <SwipersButton 
+                item={item}
+                index={index}
+              />
+            );
+          })
+        }
+      </Animated.View>
     </View>
   );
 }

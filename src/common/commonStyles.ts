@@ -34,13 +34,14 @@ export const commonStyles = StyleSheet.create({
   },
   swiperElementsContainer: { 
     width: '100%', 
-    height: '60%',
+    height: '65%',
     alignItems: 'center'
   },
-  buttonSwiperSwiperElement: {
+  swiperElementsMovedTextLine: {
     width: '100%',
     height: '100%',
     alignItems: 'center',
+    position: 'absolute'
   },
   buttonSwiperTextLineContainer: {
     position: 'absolute',
@@ -60,7 +61,11 @@ export const commonStyles = StyleSheet.create({
     height: 3,
     backgroundColor: 'white'
   },
-  buttonSwiper_Buttons: {
+  swiperElementsButtonsContainer: {
+    height: 215,
+    position: 'absolute'
+  },
+  buttonSwiper_Button: {
     width: 300,
     height: 52,
     borderRadius: 100,

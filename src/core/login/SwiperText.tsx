@@ -14,7 +14,7 @@ export function SwiperText(
   return (
     <Animated.View
         style={{
-          ...commonStyles.buttonSwiperSwiperElement,
+          ...commonStyles.swiperElementsMovedTextLine,
           transform: [{translateY: pan.y}],
           opacity: fadeOut.interpolate({
             inputRange: [0, 1],

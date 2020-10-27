@@ -1,51 +1,50 @@
 import React from 'react';
-import { Animated, Text, Image } from 'react-native';
+import { Text, Image } from 'react-native';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import { commonStyles } from '../../common/commonStyles';
 
 export function SwipersButton(
   { 
     item, 
-    index, 
-    buttonContainerScroll 
+    index
   }: any
 ) {
   return (
-    <Animated.View
+    <TouchableHighlight
+      onPress={() => alert('123')}
       style={
         {
-          ...commonStyles.buttonSwiper_Buttons,
-          bottom: buttonContainerScroll.interpolate({
-            inputRange: [0, 1],
-            outputRange: [-300, 300]
-          }),
+          ...commonStyles.buttonSwiper_Button,
           backgroundColor: item.backgroundColor
         }
       }
       key={index}
     >
-      {
-        item.image !== null && 
-        <Image 
-          source={item.image} 
+      <>
+        {
+          item.image !== null && 
+          <Image 
+            source={item.image} 
+            style={
+              {
+                width: item.imageWidth, 
+                height: item.imageHeight
+              }
+            } 
+          />
+        }
+
+        <Text
           style={
             {
-              width: item.imageWidth, 
-              height: item.imageHeight
+              ...commonStyles.facebookButtonText,
+              color: item.textColor
             }
-          } 
-        />
-      }
-
-      <Text
-        style={
-          {
-            ...commonStyles.facebookButtonText,
-            color: item.textColor
           }
-        }
-      >
-        {item.title}
-      </Text>
-    </Animated.View>
+        >
+          {item.title}
+        </Text>
+      </>
+    </TouchableHighlight>
   );
 }
