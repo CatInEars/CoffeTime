@@ -7,7 +7,8 @@ export const buttonsArr: IButtons[] = [
     textColor: 'white',
     image: require('../../../images/icon_facebook.png'),
     imageWidth: 13,
-    imageHeight: 26
+    imageHeight: 26,
+    onPressBackgroundColor: '#2B416E'
   },
   {
     title: 'Войти черезе Google',
@@ -15,12 +16,14 @@ export const buttonsArr: IButtons[] = [
     image: require('../../../images/icon_google.png'),
     textColor: 'black',
     imageWidth: 22,
-    imageHeight: 23
+    imageHeight: 23,
+    onPressBackgroundColor: '#E2E2E2'
   },
   {
     title: 'Войти черезе CoffeTime',
-    backgroundColor: '#B3C39C',
+    backgroundColor: '#C8D9AF',
     image: null,
-    textColor: 'white'
+    textColor: 'white',
+    onPressBackgroundColor: '#B3C39C'
   }
 ];

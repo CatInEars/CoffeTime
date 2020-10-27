@@ -3,6 +3,7 @@ export interface IButtons {
   title: string,
   backgroundColor: string,
   textColor: string,
+  onPressBackgroundColor: string,
   imageWidth?: number,
   imageHeight?: number
 }
