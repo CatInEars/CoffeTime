@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { LoginScreen } from './navigation/LoginScreen';
+import { WelcomeScreen } from './navigation/WelcomeScreen';
 import { globalState } from './modules/redux/state/globalState';
 
 const Stack = createStackNavigator();
@@ -23,7 +23,7 @@ export function App() {
     <Provider store={globalState}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name='Login' component={LoginScreen}/>
+          <Stack.Screen name='Login' component={WelcomeScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

@@ -4,6 +4,7 @@ export interface IButtons {
   backgroundColor: string,
   textColor: string,
   onPressBackgroundColor: string,
+  activateLogin: boolean,
   imageWidth?: number,
   imageHeight?: number
 }

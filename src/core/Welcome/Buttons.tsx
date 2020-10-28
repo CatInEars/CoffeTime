@@ -1,20 +1,36 @@
 import React from 'react';
-import { Text, Image } from 'react-native';
+import { Text, Image, ToastAndroid } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import { commonStyles } from '../../common/commonStyles';
+import { IButtons } from '../../types/data/IButtons';
 
-export function SwipersButton(
+export function Buttons(
   { 
     item, 
-    index
-  }: any
+    index,
+    onLoginClick
+  }: {
+    item: IButtons,
+    index: number,
+    onLoginClick: () => void
+  }
 ) {
+  const showToast = (message: string) => {
+    ToastAndroid.show(message, ToastAndroid.SHORT);
+  };
+
   return (
     <TouchableHighlight
-      onPress={() => alert('123')}
+      onPress={() => {
+        if (!item.activateLogin) {
+          return showToast('Войдите через CoffeTime');
+        }
+        onLoginClick();
+      }}
       style={
         {
-          ...commonStyles.buttonSwiper_Button,
+          ...commonStyles._button,
+          ...commonStyles.buttonSwiperButton,
           backgroundColor: item.backgroundColor
         }
       }

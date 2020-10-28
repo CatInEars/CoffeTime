@@ -1,4 +1,5 @@
 import { IButtons } from '../../types/data/IButtons';
+import { activeButtonColor, normalButtonColor } from '../../common/colors';
 
 export const buttonsArr: IButtons[] = [
   {
@@ -8,7 +9,8 @@ export const buttonsArr: IButtons[] = [
     image: require('../../../images/icon_facebook.png'),
     imageWidth: 13,
     imageHeight: 26,
-    onPressBackgroundColor: '#2B416E'
+    onPressBackgroundColor: '#2B416E',
+    activateLogin: false
   },
   {
     title: 'Войти через Google',
@@ -17,13 +19,15 @@ export const buttonsArr: IButtons[] = [
     textColor: 'black',
     imageWidth: 22,
     imageHeight: 23,
-    onPressBackgroundColor: '#E2E2E2'
+    onPressBackgroundColor: '#E2E2E2',
+    activateLogin: false
   },
   {
     title: 'Войти через CoffeTime',
-    backgroundColor: '#C8D9AF',
+    backgroundColor: normalButtonColor,
     image: null,
     textColor: 'white',
-    onPressBackgroundColor: '#B3C39C'
+    onPressBackgroundColor: activeButtonColor,
+    activateLogin: true
   }
 ];

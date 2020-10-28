@@ -2,7 +2,7 @@ import React from 'react';
 import { Animated, Text, View } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
 
-export function SwiperText(
+export function DragText(
   { 
     fadeOut, 
     panResponder,
@@ -29,7 +29,7 @@ export function SwiperText(
               ...commonStyles.buttonSwiperTextLineContainer,
               bottom: bottomInterval.interpolate({
                 inputRange: [0, 1],
-                outputRange: [48, 64]
+                outputRange: [54, 70]
               })
             }
           }

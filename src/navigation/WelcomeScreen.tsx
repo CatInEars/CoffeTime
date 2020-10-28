@@ -1,9 +1,9 @@
 import React from 'react';
-import { Login } from '../core/Login/Login';
+import { Welcome } from '../core/Welcome/Welcome';
 import { useNavigation } from '@react-navigation/native';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 
-export function LoginScreen() {
+export function WelcomeScreen() {
   const navigation = useNavigation(); 
 
   navigation.setOptions({
@@ -12,7 +12,7 @@ export function LoginScreen() {
 
   return (
     <>
-      <Login />
+      <Welcome />
       <ExpoStatusBar style='light' />
     </>
   );

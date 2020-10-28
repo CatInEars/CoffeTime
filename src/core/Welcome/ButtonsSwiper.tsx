@@ -1,12 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Animated, PanResponder } from 'react-native';
-import { SwiperText } from './SwiperText';
-import { SwipersButton } from './SwiperButtons';
+import { DragText } from './DragText';
+import { Buttons } from './Buttons';
 import { commonStyles } from '../../common/commonStyles';
 import { buttonsArr } from '../../modules/data/buttonsArr';
 import { IButtons } from '../../types/data/IButtons';
 
-export function ButtonSwiper() {
+export function ButtonsSwiper(
+  {
+  onLoginClick
+  }
+  : {
+    onLoginClick: () => void
+  }
+) {
   const [bottomChecker, setBottomChecker] = useState(true);
   const [isButtonsOpen, setButtonsOpen] = useState(false);
 
@@ -77,7 +84,7 @@ export function ButtonSwiper() {
     <View style={commonStyles.swiperElementsContainer}>
       {
         !isButtonsOpen &&
-        <SwiperText 
+        <DragText 
           fadeOut={fadeOut}
           panResponder={panResponder}
           bottomInterval={bottomInterval} 
@@ -91,8 +98,7 @@ export function ButtonSwiper() {
             ...commonStyles.swiperElementsButtonsContainer,
             bottom: buttonContainerScroll.interpolate({
               inputRange: [0, 1],
-              //TODO
-              outputRange: [-200, 50]
+              outputRange: [-200, 100]
             })
           }
         }
@@ -100,10 +106,11 @@ export function ButtonSwiper() {
         {
           buttonsArr.map((item: IButtons, index: number) => {
             return (
-              <SwipersButton 
+              <Buttons 
                 item={item}
                 index={index}
                 key={index.toString()}
+                onLoginClick={onLoginClick}
               />
             );
           })
