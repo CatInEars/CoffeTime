@@ -2,7 +2,7 @@ import { IButtons } from '../../types/data/IButtons';
 
 export const buttonsArr: IButtons[] = [
   {
-    title: 'Войти черезе Facebook',
+    title: 'Войти через Facebook',
     backgroundColor: '#3B5998',
     textColor: 'white',
     image: require('../../../images/icon_facebook.png'),
@@ -11,7 +11,7 @@ export const buttonsArr: IButtons[] = [
     onPressBackgroundColor: '#2B416E'
   },
   {
-    title: 'Войти черезе Google',
+    title: 'Войти через Google',
     backgroundColor: 'white',
     image: require('../../../images/icon_google.png'),
     textColor: 'black',
@@ -20,7 +20,7 @@ export const buttonsArr: IButtons[] = [
     onPressBackgroundColor: '#E2E2E2'
   },
   {
-    title: 'Войти черезе CoffeTime',
+    title: 'Войти через CoffeTime',
     backgroundColor: '#C8D9AF',
     image: null,
     textColor: 'white',

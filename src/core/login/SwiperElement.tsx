@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Animated, PanResponder } from 'react-native';
 import { SwiperText } from './SwiperText';
-import { SwipersButton } from './SwipersButton';
+import { SwipersButton } from './SwiperButtons';
 import { commonStyles } from '../../common/commonStyles';
 import { buttonsArr } from '../../modules/data/buttonsArr';
 import { IButtons } from '../../types/data/IButtons';
 
 export function ButtonSwiper() {
   const [bottomChecker, setBottomChecker] = useState(true);
-  const [swipeControll, setSwipeControll] = useState(false);
   const [isButtonsOpen, setButtonsOpen] = useState(false);
 
   const bottomInterval = useRef(new Animated.Value(0)).current;
@@ -31,16 +30,15 @@ export function ButtonSwiper() {
         
         if ((dy > 100 && vy > 0.3) || dy > 200) {
           
-          setSwipeControll(true);
           Animated.timing(fadeOut, {
             toValue: 1,
-            duration: 200,
+            duration: 120,
             useNativeDriver: false
           }).start();
           Animated.spring(buttonContainerScroll, {
             toValue: 1,
             useNativeDriver: false,
-            bounciness: 9
+            friction: 5
           }).start(() => {
             setButtonsOpen(true);
           });
@@ -82,7 +80,6 @@ export function ButtonSwiper() {
         <SwiperText 
           fadeOut={fadeOut}
           panResponder={panResponder}
-          swipeControll={swipeControll}
           bottomInterval={bottomInterval} 
           pan={pan}
         />
@@ -95,7 +92,7 @@ export function ButtonSwiper() {
             bottom: buttonContainerScroll.interpolate({
               inputRange: [0, 1],
               //TODO
-              outputRange: [-215, 100]
+              outputRange: [-200, 50]
             })
           }
         }
@@ -106,6 +103,7 @@ export function ButtonSwiper() {
               <SwipersButton 
                 item={item}
                 index={index}
+                key={index.toString()}
               />
             );
           })

@@ -19,7 +19,7 @@ export function SwipersButton(
         }
       }
       underlayColor={item.onPressBackgroundColor}
-      key={index}
+      key={index.toString()}
     >
       <>
         {

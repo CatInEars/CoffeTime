@@ -5,8 +5,7 @@ import { commonStyles } from '../../common/commonStyles';
 export function SwiperText(
   { 
     fadeOut, 
-    panResponder, 
-    swipeControll,
+    panResponder,
     bottomInterval,
     pan 
   }: any
@@ -28,17 +27,10 @@ export function SwiperText(
           style={
             {
               ...commonStyles.buttonSwiperTextLineContainer,
-              bottom: 
-                swipeControll ? 
-                    fadeOut.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [56, 100]
-                    })
-                  : bottomInterval.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [48, 64]
-                  })
-
+              bottom: bottomInterval.interpolate({
+                inputRange: [0, 1],
+                outputRange: [48, 64]
+              })
             }
           }
         >
