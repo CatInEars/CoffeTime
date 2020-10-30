@@ -8,7 +8,7 @@ export function LoginSubmit() {
   const [inputValue, setInputValue] = useState('');
   
   return (
-    <View style={{alignItems: 'center', bottom: 100}}>
+    <View style={commonStyles.loginSubmitContainer}>
       <TextInput 
         value={inputValue}
         onChangeText={(newValue: string) => setInputValue(newValue)}

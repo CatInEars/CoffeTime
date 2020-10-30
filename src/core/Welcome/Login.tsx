@@ -2,23 +2,12 @@ import React from 'react';
 import { View } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
 import { LoginSubmit } from './LoginSubmit';
+import { SelectPhoto } from './SelectPhoto';
 
 export function Login() {
   return (
     <View style={commonStyles.loginSection}>
-      <View 
-        style={
-          {
-            width: 150,
-            height: 150,
-            backgroundColor: 'skyblue',
-            marginTop: '10%'
-          }
-        }
-      >
-
-      </View>
-
+      <SelectPhoto />
       <LoginSubmit />
     </View>
   );

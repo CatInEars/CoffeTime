@@ -16,10 +16,17 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   loginPageImage: {
-    width: '102%', 
-    height: screenHeight + 35, 
+    width: '100%', 
+    height: screenHeight + 35,
     position: 'absolute',
     zIndex: -1
+  },
+  linearGradient: {
+    flex: 1, 
+    alignItems: 'center', 
+    width: '100%', 
+    height: screenHeight + 35, 
+    position: 'absolute'
   },
   logoTitleTextContainer: {
     marginTop: 101
@@ -104,8 +111,18 @@ export const commonStyles = StyleSheet.create({
   loginSection: {
     width: '50%', 
     height: '100%',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    alignItems: 'center'
+  },
+  loginSubmitContainer: {
+    alignItems: 'center', 
+    bottom: 100, 
+    position: 'absolute'
+  },
+  selectPhotoContainer: {
+    marginTop: '10%', 
+    width: 150, 
+    height: 150,
+    backgroundColor: 'skyblue'
   },
   _button: {
     width: 300,
