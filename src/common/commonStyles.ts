@@ -122,7 +122,31 @@ export const commonStyles = StyleSheet.create({
     marginTop: '10%', 
     width: 150, 
     height: 150,
-    backgroundColor: 'skyblue'
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative'
+  },
+  selectedPhoto: {
+    width: 152, 
+    height: 152, 
+    borderColor: 'white',
+    borderWidth: 2,
+    borderRadius: 100,
+    overflow: 'hidden'
+  },
+  selectedPhotoCircle: {
+    position: 'absolute', 
+    width: 170, 
+    height: 170, 
+    borderColor: 'white', 
+    borderStyle: 'solid', 
+    borderWidth: 4, 
+    borderRadius: 100
+  },
+  selectPhotoPlusIcon: {
+    width: 154, 
+    height: 154,
+    opacity: 0.85
   },
   _button: {
     width: 300,
