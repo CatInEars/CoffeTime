@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { WelcomeScreen } from './navigation/WelcomeScreen';
 import { globalState } from './modules/redux/state/globalState';
+import { CoffeListScreen } from './navigation/CoffeListScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,7 +24,8 @@ export function App() {
     <Provider store={globalState}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name='Login' component={WelcomeScreen}/>
+          <Stack.Screen name='Welcome' component={WelcomeScreen} />
+          <Stack.Screen name='CoffeList' component={CoffeListScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

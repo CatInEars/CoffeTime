@@ -97,16 +97,19 @@ export const commonStyles = StyleSheet.create({
     width: screenWidth * 2,
     height: '100%'
   },
-  loginInput: {
-    height: 36,
+  loginInputContainer: {
+    height: 43,
     width: 247,
-    borderBottomColor: 'rgba(255, 255, 255, 0.5)',
+    borderStyle: 'solid',
+    borderBottomWidth: 3
+  },
+  loginInput: {
+    width: '100%',
+    height: '100%',
     fontSize: 18,
+    color: 'white',
     paddingVertical: 8,
     paddingHorizontal: 10,
-    borderStyle: 'solid',
-    borderBottomWidth: 3,
-    color: 'white'
   },
   loginSection: {
     width: '50%', 
@@ -135,18 +138,23 @@ export const commonStyles = StyleSheet.create({
     overflow: 'hidden'
   },
   selectedPhotoCircle: {
-    position: 'absolute', 
-    width: 170, 
-    height: 170, 
+    position: 'absolute',
     borderColor: 'white', 
     borderStyle: 'solid', 
     borderWidth: 4, 
-    borderRadius: 100
+    borderRadius: 100,
+    zIndex: -1
   },
   selectPhotoPlusIcon: {
     width: 154, 
     height: 154,
     opacity: 0.85
+  },
+  loginPageErrorText: {
+    position: 'absolute', 
+    bottom: -30, 
+    fontSize: 18, 
+    color: 'red'
   },
   _button: {
     width: 300,

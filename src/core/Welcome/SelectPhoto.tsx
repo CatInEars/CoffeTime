@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import { Image, View, TouchableHighlight } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { Image, View, TouchableHighlight, Animated } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
 import * as ImagePicker from 'expo-image-picker';
 
 export function SelectPhoto() {
   const [image, setImage] = useState<null | string>(null);
   const plusIcon = require('../../../images/plus.png');
+  const widthHeight = useRef(new Animated.Value(0)).current;
+  
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -17,6 +19,12 @@ export function SelectPhoto() {
 
     if (!result.cancelled) {
       setImage(result.uri);
+      Animated.spring(widthHeight, {
+        toValue: 1,
+        mass: 4,
+        useNativeDriver: false,
+        delay: 1500
+      }).start();
     }
   };
 
@@ -27,7 +35,20 @@ export function SelectPhoto() {
         ? 
           <>
             <Image source={{uri: image}} style={commonStyles.selectedPhoto} />
-            <View style={commonStyles.selectedPhotoCircle} />
+            <Animated.View style={
+              {
+                ...commonStyles.selectedPhotoCircle,
+                width: widthHeight.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, 170]
+                }),
+                height: widthHeight.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, 170]
+                })
+              } 
+            }
+            />
           </>
         :
           <TouchableHighlight onPress={pickImage}>
