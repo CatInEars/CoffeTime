@@ -101,10 +101,12 @@ export const commonStyles = StyleSheet.create({
     height: 43,
     width: 247,
     borderStyle: 'solid',
-    borderBottomWidth: 3
+    borderBottomWidth: 2,
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   loginInput: {
-    width: '100%',
+    width: '90%',
     height: '100%',
     fontSize: 18,
     color: 'white',

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { TextInput, View, Text, Animated } from 'react-native';
+import { TextInput, View, Text, Animated, Image } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import { activeButtonColor } from '../../common/colors';
 import { commonStyles } from '../../common/commonStyles';
@@ -70,6 +70,7 @@ export function LoginSubmit() {
           placeholder='Введите своё имя'
           placeholderTextColor='white'
         />
+        <Image source={require('../../../images/icon_pencil.png')} />
       </Animated.View>
       {
         error === LOW_LENGTH &&
