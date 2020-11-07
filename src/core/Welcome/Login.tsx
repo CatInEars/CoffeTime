@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Keyboard, View } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
+import { ErrorBlock } from './ErrorBlock';
 import { LoginSubmit } from './LoginSubmit';
 import { SelectPhoto } from './SelectPhoto';
 
 export function Login() {
   const [needShow, setNeedShow] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     Keyboard.addListener("keyboardDidShow", () => {
@@ -23,7 +25,11 @@ export function Login() {
         needShow &&
         <SelectPhoto />
       }
-      <LoginSubmit />
+      <LoginSubmit setError={setError} />
+      {
+        !!error && 
+        <ErrorBlock errorType={error} setError={setError} />
+      }
     </View>
   );
 }

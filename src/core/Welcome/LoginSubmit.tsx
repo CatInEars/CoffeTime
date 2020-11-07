@@ -5,9 +5,12 @@ import { activeButtonColor } from '../../common/colors';
 import { commonStyles } from '../../common/commonStyles';
 import { useNavigation } from '@react-navigation/native';
 
-export function LoginSubmit() {
+interface IProps {
+  setError: (errorType: string) => void
+}
+
+export function LoginSubmit({ setError }: IProps) {
   const [inputValue, setInputValue] = useState('');
-  const [error, setError] = useState<null | string>(null);
   const navigation = useNavigation();
   const errorIndicator = useRef(new Animated.Value(0)).current;
   const EMPTY = 'EMPTY';
@@ -30,7 +33,7 @@ export function LoginSubmit() {
   function validError(typeError: string): void {
     if(typeError === EMPTY) {
       startAnimation();
-      setError(EMPTY)
+      setError(EMPTY);
     } else if (typeError === LOW_LENGTH) {
       startAnimation();
       setError(LOW_LENGTH);
@@ -72,14 +75,6 @@ export function LoginSubmit() {
         />
         <Image source={require('../../../images/icon_pencil.png')} />
       </Animated.View>
-      {
-        error === LOW_LENGTH &&
-        <Text style={commonStyles.loginPageErrorText}>Слишком короткое имя</Text>
-      }
-      {
-        error === EMPTY && 
-        <Text style={commonStyles.loginPageErrorText}>Введите имя</Text>
-      }
       <TouchableHighlight
         onPress={handleSubmit}
         underlayColor={activeButtonColor}

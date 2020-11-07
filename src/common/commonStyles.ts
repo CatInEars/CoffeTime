@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { normalButtonColor } from './colors';
+import { activeButtonColor, normalButtonColor } from './colors';
 
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
@@ -156,6 +156,18 @@ export const commonStyles = StyleSheet.create({
     position: 'absolute', 
     bottom: -30, 
     fontSize: 18, 
+    color: 'red'
+  },
+  errorContainer: {
+    width: '100%',
+    height: 60,
+    backgroundColor: 'white',
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  errorText: {
+    fontSize: 22,
     color: 'red'
   },
   _button: {

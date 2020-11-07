@@ -19,11 +19,11 @@ export function SelectPhoto() {
 
     if (!result.cancelled) {
       setImage(result.uri);
-      Animated.spring(widthHeight, {
+      Animated.timing(widthHeight, {
         toValue: 1,
-        mass: 4,
+        duration: 800,
         useNativeDriver: false,
-        delay: 1500
+        delay: 100
       }).start();
     }
   };
