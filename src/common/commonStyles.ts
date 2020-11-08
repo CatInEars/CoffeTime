@@ -161,14 +161,14 @@ export const commonStyles = StyleSheet.create({
   errorContainer: {
     width: '100%',
     height: 60,
-    backgroundColor: 'white',
+    backgroundColor: '#fdf4e3',
     position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center'
   },
   errorText: {
     fontSize: 22,
-    color: 'red'
+    color: '#EE7155'
   },
   _button: {
     width: 300,

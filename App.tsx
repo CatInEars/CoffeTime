@@ -4,10 +4,14 @@
 */
 
 import React from 'react';
+import { Provider } from 'react-redux';
 import { App } from './src/index';
+import { globalState } from './src/modules/redux/state/globalState';
 
 export default function() {
   return (
-    <App />
+    <Provider store={globalState}>
+      <App />
+    </Provider>
   );
 }

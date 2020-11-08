@@ -1,10 +1,18 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import { Dispatch } from 'redux';
 import { Image, View, TouchableHighlight, Animated } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
 import * as ImagePicker from 'expo-image-picker';
+import { connect } from 'react-redux';
+import { IAppState } from '../../types/redux/state/IAppState';
+import { IUserPhotoAction } from '../../types/redux/actions';
 
-export function SelectPhoto() {
-  const [image, setImage] = useState<null | string>(null);
+interface IProps {
+  photo: any,
+  onPickPhoto: (photo: any) => void
+}
+
+function selectPhoto({ photo, onPickPhoto}: IProps) {
   const plusIcon = require('../../../images/plus.png');
   const widthHeight = useRef(new Animated.Value(0)).current;
   
@@ -18,7 +26,7 @@ export function SelectPhoto() {
     });
 
     if (!result.cancelled) {
-      setImage(result.uri);
+      onPickPhoto(result.uri);
       Animated.timing(widthHeight, {
         toValue: 1,
         duration: 800,
@@ -31,10 +39,10 @@ export function SelectPhoto() {
   return (
     <View style={commonStyles.selectPhotoContainer}>
       {
-        image 
+        photo 
         ? 
           <>
-            <Image source={{uri: image}} style={commonStyles.selectedPhoto} />
+            <Image source={{uri: photo}} style={commonStyles.selectedPhoto} />
             <Animated.View style={
               {
                 ...commonStyles.selectedPhotoCircle,
@@ -58,3 +66,12 @@ export function SelectPhoto() {
     </View>
   )
 }
+
+export const SelectPhoto = connect(
+  (state: IAppState) => ({
+    photo: state.user.photo
+  }),
+  (dispatch: Dispatch<IUserPhotoAction>) => ({
+    onPickPhoto: (photo: any) => dispatch({type: 'USER_PHOTO_SELECT', photo}) 
+  })
+)(selectPhoto)

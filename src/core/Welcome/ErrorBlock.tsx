@@ -22,7 +22,7 @@ export function ErrorBlock({ errorType, setError }: IProps ) {
           duration: 300,
           useNativeDriver: false
         }).start(() => setError(''));
-      }, 1500);
+      }, 1300);
     });
   });
 

@@ -12,7 +12,7 @@ export function Welcome() {
     <View style={commonStyles.loginPage}>
       <View style={{width: '100%', position: "absolute"}}>
         <LinearGradient
-          colors={['transparent', 'rgba(243,233,216,0.85)']}
+          colors={['transparent', 'rgba(243, 233, 216, 0.79)']}
           locations={[0.45, 1]}
           style={commonStyles.linearGradient}
         />

@@ -1,10 +1,15 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useEffect } from 'react';
+import { CoffeList } from '../core/CoffeList/CoffeList';
 import { useNavigation } from '@react-navigation/native';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 
 export function CoffeListScreen() {
-  const navigation = useNavigation(); 
+  const navigation = useNavigation();
+  useEffect(() => {
+    navigation.addListener('beforeRemove', (e) => {
+      e.preventDefault();
+    });
+  });
 
   navigation.setOptions({
     headerShown: false
@@ -12,9 +17,7 @@ export function CoffeListScreen() {
   
   return (
     <>
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>CoffeList Screen</Text>
-      </View>
+      <CoffeList />
       <ExpoStatusBar style='dark' />
     </>
   );

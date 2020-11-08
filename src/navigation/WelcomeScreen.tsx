@@ -1,11 +1,8 @@
 import React from 'react';
 import { Welcome } from '../core/Welcome/Welcome';
-import { useNavigation } from '@react-navigation/native';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 
-export function WelcomeScreen() {
-  const navigation = useNavigation(); 
-
+export function WelcomeScreen({ navigation }: any) {
   navigation.setOptions({
     headerShown: false
   });
