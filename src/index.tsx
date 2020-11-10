@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { WelcomeScreen } from './navigation/WelcomeScreen';
 import { CoffeListScreen } from './navigation/CoffeListScreen';
-import { IAppState, IUserState } from './types/redux/state/IAppState';
+import { IAppState } from './types/redux/state/IAppState';
 import { connect } from 'react-redux';
 
 const Stack = createStackNavigator();
@@ -27,11 +27,14 @@ function app({ userIsLogin }: IProps) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {
+        {/* {
           userIsLogin ?
             <Stack.Screen name='CoffeList' component={CoffeListScreen} />
           :
             <Stack.Screen name='Welcome' component={WelcomeScreen} />
+        } */}
+        {
+          <Stack.Screen name='CoffeList' component={CoffeListScreen} />
         }
       </Stack.Navigator>
     </NavigationContainer>
@@ -43,5 +46,6 @@ export const App = connect(
     userIsLogin: state.login
   }),
 )(app);
+
 // TODO 
 // npm remove safe-area-view

@@ -1,8 +1,6 @@
 import { IRootAction } from '../../../types/redux/actions';
 import { initialState } from '../state/initialState';
 
-// TODO
-// action type need correct before build app
 export function rootReducer(state = initialState, action: IRootAction) {
   if ( action.type === 'CHANGE_NAME' ) {
     return { 

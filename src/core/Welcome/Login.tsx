@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Keyboard, View } from 'react-native';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import { commonStyles } from '../../common/commonStyles';
 import { ErrorBlock } from './ErrorBlock';
 import { LoginSubmit } from './LoginSubmit';

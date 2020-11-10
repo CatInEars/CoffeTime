@@ -14,8 +14,7 @@ interface IProps {
 
 function selectPhoto({ photo, onPickPhoto}: IProps) {
   const plusIcon = require('../../../images/plus.png');
-  const widthHeight = useRef(new Animated.Value(0)).current;
-  
+  const widthHeight = useRef(new Animated.Value(photo === null ? 0 : 1)).current;
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
