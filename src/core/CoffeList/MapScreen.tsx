@@ -1,16 +1,25 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { googleMapsStyle } from '../../modules/data/googleMapsStyle';
 
-export function CoffeList() {
+export function MapScreen() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+
+  const navigation = useNavigation();
+
+  const image = require('../../../images/coffeList.png');
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((e) => {
       setY(e.coords.latitude);
       setX(e.coords.longitude);
+    });
+
+    navigation.setOptions({
+      tabBarIcon: () => (<Image style={{width: 24, height: 24}} source={image} />)
     })
   }, [])
 

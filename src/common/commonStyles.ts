@@ -170,6 +170,30 @@ export const commonStyles = StyleSheet.create({
     fontSize: 22,
     color: '#EE7155'
   },
+  logoText: {
+    fontFamily: 'Lobster-Regular', 
+    fontSize: 22
+  },
+  coffeTabNavigatorContainer: {
+    width: '100%',
+    height: 54,
+    position: 'absolute',
+    alignItems: 'center'
+  },
+  coffeTabNavigator: {
+    width: 188,
+    height: 46,
+    top: 8,
+    borderRadius: 100,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'black',
+    flexDirection: 'row'
+  },
+  coffeTabNavigatorButtonBlock: {
+    width: '50%', 
+    height: '100%', 
+  },
   _button: {
     width: 300,
     height: 52,
