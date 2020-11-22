@@ -181,18 +181,30 @@ export const commonStyles = StyleSheet.create({
     alignItems: 'center'
   },
   coffeTabNavigator: {
-    width: 188,
+    width: 150,
     height: 46,
     top: 8,
     borderRadius: 100,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'black',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   coffeTabNavigatorButtonBlock: {
-    width: '50%', 
-    height: '100%', 
+    width: 75, 
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  coffeTabNavigatorBackground: {
+    width: '49%',
+    height: '85%',
+    backgroundColor: normalButtonColor,
+    position: 'absolute',
+    borderRadius: 20,
+    left: 2,
+    zIndex: -1
   },
   _button: {
     width: 300,

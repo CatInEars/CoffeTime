@@ -22,10 +22,10 @@ export function CoffeListScreen() {
   return (
     <>
       <Tab.Navigator
-        tabBar={props => <CoffeListTabBar {...props} />}
+        tabBar={() => <CoffeListTabBar />}
       >
         <Tab.Screen name='MapScreen' component={MapScreen} />
-        <Tab.Screen name='asasas' component={() => <></>} />
+        <Tab.Screen name='home' component={() => <></>} />
       </Tab.Navigator>
       <ExpoStatusBar style='dark' />
     </>

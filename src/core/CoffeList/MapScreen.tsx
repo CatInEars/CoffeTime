@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Image } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { googleMapsStyle } from '../../modules/data/googleMapsStyle';
 
@@ -9,6 +9,10 @@ export function MapScreen() {
   const [y, setY] = useState(0);
 
   const navigation = useNavigation();
+
+  navigation.setOptions({
+    animationTypeForReplace: 'push'
+  })
 
   const image = require('../../../images/coffeList.png');
 
