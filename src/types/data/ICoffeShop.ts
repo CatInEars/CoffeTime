@@ -1,4 +1,5 @@
 export interface ICoffeShop {
   image: any,
-  address?: any
+  name: string,
+  address: string
 }

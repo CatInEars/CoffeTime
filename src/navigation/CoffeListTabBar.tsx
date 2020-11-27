@@ -45,7 +45,7 @@ export function CoffeListTabBar() {
               duration: 250,
               useNativeDriver: false 
             }).start();
-            navigation.navigate('home');
+            navigation.navigate('CoffeShopList');
           }}
         >
           <CoffeListTabIcon />

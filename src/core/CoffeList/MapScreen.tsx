@@ -15,7 +15,6 @@ export function MapScreen() {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((e) => {
-      console.log(e.coords);
       setRegion(e.coords);
       setRegionGet(true);
     });

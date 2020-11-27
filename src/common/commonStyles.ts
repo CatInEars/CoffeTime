@@ -176,9 +176,9 @@ export const commonStyles = StyleSheet.create({
   },
   coffeTabNavigatorContainer: {
     width: '100%',
-    height: 54,
+    height: 63,
     position: 'absolute',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   coffeTabNavigator: {
     width: 150,
@@ -205,6 +205,24 @@ export const commonStyles = StyleSheet.create({
     borderRadius: 20,
     left: 2,
     zIndex: -1
+  },
+  coffeShopListScreen: {
+    marginTop: 63, 
+    backgroundColor: 'white'
+  },
+  coffePreviewContainer: {
+    width: '100%',
+    height: 130, 
+    backgroundColor: 'lightgray', 
+    marginBottom: 12,
+    flexDirection: 'row'
+  },
+  coffePreviewImage: {
+    width: 130, 
+    height: '100%'
+  },
+  coffePreviewInfoContainer: {
+
   },
   _button: {
     width: 300,

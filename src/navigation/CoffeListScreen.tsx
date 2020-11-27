@@ -26,7 +26,7 @@ export function CoffeListScreen() {
         tabBar={() => <CoffeListTabBar />}
       >
         <Tab.Screen name='MapScreen' component={MapScreen} />
-        <Tab.Screen name='home' component={CoffeShopList} />
+        <Tab.Screen name='CoffeShopList' component={CoffeShopList} />
       </Tab.Navigator>
       <ExpoStatusBar style='dark' />
     </>
