@@ -212,8 +212,7 @@ export const commonStyles = StyleSheet.create({
   },
   coffePreviewContainer: {
     width: '100%',
-    height: 130, 
-    backgroundColor: 'lightgray', 
+    height: 130,
     marginBottom: 12,
     flexDirection: 'row'
   },
@@ -221,8 +220,29 @@ export const commonStyles = StyleSheet.create({
     width: 130, 
     height: '100%'
   },
-  coffePreviewInfoContainer: {
-
+  coffePreviewNameContainer: {
+    marginVertical: 8,
+    marginLeft: 14
+  },
+  coffePreviewCoffeName: {
+    fontSize: 20,
+    color: normalButtonColor
+  },
+  coffePreviewDescribeContainer: {
+    marginLeft: 14,
+  },
+  coffePreviewDescribeText: {
+    color: 'gray',
+  },
+  coffePreviewButtonContainer: {
+    flexDirection: 'row',
+    position: 'absolute',
+    right: 6,
+    bottom: 9
+  },
+  coffePreviewButtonText: {
+    color: '#BBBBBB', 
+    fontSize: 14
   },
   _button: {
     width: 300,

@@ -17,7 +17,8 @@ function app({ userIsLogin }: IProps) {
   const [loaded] = useFonts({
     'Lobster-Regular': require('../assets/fonts/Lobster-Regular.ttf'),
     'SFUITextLight': require('../assets/fonts/SF-UI-Text-Light.otf'),
-    'SFUITextRegular': require('../assets/fonts/SF-UI-Text-Regular.otf')
+    'SFUITextRegular': require('../assets/fonts/SF-UI-Text-Regular.otf'),
+    'SFUITextBold': require('../assets/fonts/SF-UI-Text-Bold.otf')
   });
 
   if (!loaded) {
