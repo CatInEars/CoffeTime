@@ -22,11 +22,13 @@ export function CoffeListTabBar() {
             borderBottomLeftRadius: 100
           }}
           onPress={() => {
-            Animated.timing(leftPosition, {
-              toValue: 0,
-              duration: 250,
-              useNativeDriver: false 
-            }).start();
+            setTimeout(() => {
+              Animated.timing(leftPosition, {
+                toValue: 0,
+                duration: 180,
+                useNativeDriver: false
+              }).start();
+            }, 0)
             navigation.navigate('MapScreen');
           }}
         >
@@ -40,11 +42,13 @@ export function CoffeListTabBar() {
             borderBottomRightRadius: 100
           }}
           onPress={() => {
-            Animated.timing(leftPosition, {
-              toValue: 1,
-              duration: 250,
-              useNativeDriver: false 
-            }).start();
+            setTimeout(() => {
+              Animated.timing(leftPosition, {
+                toValue: 1,
+                duration: 180,
+                useNativeDriver: false
+              }).start();
+            }, 0)
             navigation.navigate('CoffeShopList');
           }}
         >

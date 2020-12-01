@@ -27,16 +27,16 @@ function app({ userIsLogin }: IProps) {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        {/* {
+      <Stack.Navigator>
+        {
           userIsLogin ?
-            <Stack.Screen name='CoffeList' component={CoffeListScreen} />
+            <Stack.Screen name='CoffeAppNavigation' component={CoffeAppNavigation} />
           :
             <Stack.Screen name='Welcome' component={WelcomeScreen} />
-        } */}
-        {
-          <Stack.Screen name='CoffeAppNavigation' component={CoffeAppNavigation} />
         }
+        {/* {
+          <Stack.Screen name='CoffeAppNavigation' component={CoffeAppNavigation} />
+        } */}
       </Stack.Navigator>
     </NavigationContainer>
   );
