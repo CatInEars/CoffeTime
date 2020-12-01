@@ -2,9 +2,9 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useRef } from 'react';
 import { View, Animated } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
-import { commonStyles } from '../common/commonStyles';
-import { CoffeListTabIcon } from '../core/svg/CoffeListTabIcon';
-import { MapTabIcon } from '../core/svg/MapTabIcon';
+import { commonStyles } from '../../common/commonStyles';
+import { CoffeListTabIcon } from '../../core/svg/CoffeListTabIcon';
+import { MapTabIcon } from '../../core/svg/MapTabIcon';
 
 export function CoffeListTabBar() {
   const navigation = useNavigation();

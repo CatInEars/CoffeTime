@@ -1,9 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import { LogBox, View } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import { commonStyles } from '../../common/commonStyles';
 import { CoffeShopsDataList } from '../../modules/data/CoffeShopsDataList';
 import { CoffePreview } from './CoffePreview';
+
+LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
 
 export function CoffeShopList() {
   return (

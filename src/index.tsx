@@ -3,9 +3,9 @@ import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { WelcomeScreen } from './navigation/WelcomeScreen';
-import { CoffeListScreen } from './navigation/CoffeListScreen';
 import { IAppState } from './types/redux/state/IAppState';
 import { connect } from 'react-redux';
+import { CoffeAppNavigation } from './navigation/CoffeAppNavigation';
 
 const Stack = createStackNavigator();
 
@@ -27,7 +27,7 @@ function app({ userIsLogin }: IProps) {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         {/* {
           userIsLogin ?
             <Stack.Screen name='CoffeList' component={CoffeListScreen} />
@@ -35,7 +35,7 @@ function app({ userIsLogin }: IProps) {
             <Stack.Screen name='Welcome' component={WelcomeScreen} />
         } */}
         {
-          <Stack.Screen name='CoffeList' component={CoffeListScreen} />
+          <Stack.Screen name='CoffeAppNavigation' component={CoffeAppNavigation} />
         }
       </Stack.Navigator>
     </NavigationContainer>

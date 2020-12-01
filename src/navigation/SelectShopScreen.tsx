@@ -3,14 +3,14 @@ import { MapScreen } from '../core/CoffeList/MapScreen';
 import { useNavigation } from '@react-navigation/native';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { CoffeListTabBar } from './CoffeListTabBar';
+import { CoffeListTabBar } from './modules/CoffeListTabBar';
 import { CoffeTimeStackHeader } from './CoffeTimeHeader/CoffeTimeStackHeader';
 import { CoffeShopList } from '../core/CoffeList/CoffeShopList';
 // import { HeaderBackButton } from './CoffeTimeHeader/HeaderBackButton';
 
 const Tab = createBottomTabNavigator();
 
-export function CoffeListScreen() {
+export function SelectShopScreen() {
   const navigation = useNavigation();
   useEffect(() => {
     navigation.setOptions({
