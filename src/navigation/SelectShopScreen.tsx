@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { MapScreen } from '../core/CoffeList/MapScreen';
+import React from 'react';
+import { MapScreen } from '../core/SelectShop/MapScreen';
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { CoffeListTabBar } from './modules/CoffeListTabBar';
-import { CoffeShopList } from '../core/CoffeList/CoffeShopList';
+import { CoffeShopList } from '../core/SelectShop/CoffeShopsList';
 
 const Tab = createBottomTabNavigator();
 

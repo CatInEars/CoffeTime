@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SelectShopScreen } from './SelectShopScreen';
-import { ShopInfoScreen } from './ShopInfoScreen';
+import { ShopScreen } from './ShopScreen';
 import { useNavigation } from '@react-navigation/native';
 import { CoffeTimeStackHeader } from './CoffeTimeHeader/CoffeTimeStackHeader';
 
@@ -22,7 +22,7 @@ export function CoffeAppNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen name='SelectShopScreen' component={SelectShopScreen} />
-      <Stack.Screen name='ShopInfoScreen' component={ShopInfoScreen} />
+      <Stack.Screen name='ShopScreen' component={ShopScreen} />
     </Stack.Navigator>
   )
 }

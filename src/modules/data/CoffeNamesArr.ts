@@ -1,5 +1,5 @@
 export const CoffeNamesArrFirst = [
-  'Coffee',
+  'Coffe',
   'Best'
 ];
 

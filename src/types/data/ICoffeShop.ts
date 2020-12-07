@@ -1,5 +1,7 @@
 export interface ICoffeShop {
-  image: any,
+  coffePreviewImage: any,
+  coffeOutsideImage: any,
   name: string,
-  address: string
+  address: string,
+  id: number
 }

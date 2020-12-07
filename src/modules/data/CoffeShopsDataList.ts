@@ -4,53 +4,73 @@ import { CoffeNamesArrFirst, CoffeNamesArrSecond } from './CoffeNamesArr';
 
 export const CoffeShopsDataList: ICoffeShop[] = [
   {
-    image: require(`../../../images/CoffePrevies/previe1.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe1.jpg`),
+    coffeOutsideImage: require('../../../images/CoffeOutside/image1.jpg'),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 1
   },
   {
-    image: require(`../../../images/CoffePrevies/previe2.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe2.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image2.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 2
   },
   {
-    image: require(`../../../images/CoffePrevies/previe3.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe3.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image3.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 3
   },
   {
-    image: require(`../../../images/CoffePrevies/previe4.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe4.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image4.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 4
   },
   {
-    image: require(`../../../images/CoffePrevies/previe5.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe5.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image5.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 5
   },
   {
-    image: require(`../../../images/CoffePrevies/previe1.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe1.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image1.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 6
   },
   {
-    image: require(`../../../images/CoffePrevies/previe2.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe2.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image2.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 7
   },
   {
-    image: require(`../../../images/CoffePrevies/previe3.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe3.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image3.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 8
   },
   {
-    image: require(`../../../images/CoffePrevies/previe4.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe4.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image4.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 9
   },
   {
-    image: require(`../../../images/CoffePrevies/previe5.jpg`),
+    coffePreviewImage: require(`../../../images/CoffePrevies/previe5.jpg`),
+    coffeOutsideImage: require(`../../../images/CoffeOutside/image5.jpg`),
     name: `${CoffeNamesArrFirst[randomMath(0, CoffeNamesArrFirst.length - 1)]} ${CoffeNamesArrSecond[randomMath(0, CoffeNamesArrSecond.length - 1)]}`,
-    address: ''
+    address: '',
+    id: 10
   }
-]
+];

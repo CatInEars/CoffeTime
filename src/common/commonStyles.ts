@@ -244,6 +244,12 @@ export const commonStyles = StyleSheet.create({
     color: '#BBBBBB', 
     fontSize: 14
   },
+  shopImage: {
+    width: '100%', 
+    height: 310, 
+    position: 'absolute', 
+    zIndex: -1
+  },
   _button: {
     width: 300,
     height: 52,
