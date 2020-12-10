@@ -32,6 +32,7 @@ export const commonStyles = StyleSheet.create({
     marginTop: 101
   },
   logoTitleText: {
+    fontFamily: 'LobsterRegular',
     color: 'white',
     fontSize: 64,
   },
@@ -40,6 +41,7 @@ export const commonStyles = StyleSheet.create({
     left: 89
   },
   logoLightText: {
+    fontFamily: 'SFUITextLight',
     color: 'white',
     fontSize: 16
   },
@@ -171,7 +173,7 @@ export const commonStyles = StyleSheet.create({
     color: '#EE7155'
   },
   logoText: {
-    fontFamily: 'Lobster-Regular', 
+    fontFamily: 'LobsterRegular', 
     fontSize: 22
   },
   coffeTabNavigatorContainer: {
@@ -249,6 +251,29 @@ export const commonStyles = StyleSheet.create({
     height: 310, 
     position: 'absolute', 
     zIndex: -1
+  },
+  shopBannerContainer: {
+    width: '100%', 
+    height: 310
+  },
+  shopBannerName: {
+    fontFamily: 'LobsterRegular', 
+    fontSize: 32,
+    color: '#474747',
+    marginBottom: 4
+  },
+  shopBannerAddres: {
+    fontSize: 20,
+    fontFamily: 'SFUITextRegular',
+    color: '#717171'
+  },
+  shopBannerInfoContainer: {
+    position: 'absolute',
+    bottom: 2,
+    width: '100%', 
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16
   },
   _button: {
     width: 300,

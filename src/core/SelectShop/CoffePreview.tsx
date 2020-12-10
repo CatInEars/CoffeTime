@@ -49,7 +49,7 @@ export function CoffePreview(props: ICoffeShop) {
                 fontSize: 16
               }}
             >
-              ул. Юности д. 120
+              {props.address}
             </Text>
           </View>
 

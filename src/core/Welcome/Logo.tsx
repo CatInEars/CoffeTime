@@ -7,14 +7,7 @@ export function Logo() {
     <View>
      <View style={commonStyles.logoTitleTextContainer}>
       <Text 
-        style={
-          [
-            commonStyles.logoTitleText, 
-            {
-              fontFamily: 'Lobster-Regular'
-            }
-          ]
-        }
+        style={commonStyles.logoTitleText}
       >
         CoffeTime
       </Text>
@@ -22,14 +15,7 @@ export function Logo() {
 
       <View style={commonStyles.logoLightTextContainer}>
       <Text
-        style={
-          [
-            commonStyles.logoLightText,
-            {
-              fontFamily: 'SFUITextLight'
-            }
-          ]
-        }
+        style={commonStyles.logoLightText}
       >
         территория кофе
       </Text>
