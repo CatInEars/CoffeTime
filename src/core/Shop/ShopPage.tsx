@@ -1,8 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import { ICoffeShop } from '../../types/data/ICoffeShop';
 import { ShopBanner } from './ShopBanner';
+import { DrinksList } from './DrinksList';
 
 interface IRoute {
   params: ICoffeShop,
@@ -14,8 +15,9 @@ export function Shop() {
   const route: IRoute = useRoute();
 
   return (
-    <View>
+    <ScrollView>
       <ShopBanner {...route.params} />
-    </View>
+      <DrinksList />
+    </ScrollView>
   )
 }

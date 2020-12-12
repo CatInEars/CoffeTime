@@ -13,7 +13,7 @@ export function ShopBanner({ coffeOutsideImage, name, address }: ICoffeShop) {
 
         <LinearGradient
           colors={['transparent', '#F7ECDA']}
-          locations={[0.6, 1]}
+          locations={[0.35, 1]}
           style={{...commonStyles.linearGradient, opacity: 1, height: 310}}
         >
 

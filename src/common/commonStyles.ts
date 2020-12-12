@@ -275,6 +275,21 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 16
   },
+  drinksContainer: {
+    width: '100%',
+    height: 1000,
+    paddingRight: 7,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 7
+  },
+  drinkBlock: {
+    marginBottom: 7,
+    marginLeft: 7,
+    width: screenWidth/2 - 14,
+    height: 220,
+    backgroundColor: 'orange',
+  },
   _button: {
     width: 300,
     height: 52,

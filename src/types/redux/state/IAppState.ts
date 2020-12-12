@@ -1,6 +1,9 @@
+import { ICoffeShop } from "../../data/ICoffeShop";
+
 export interface IAppState {
   login: boolean,
-  user: IUserState
+  user: IUserState,
+  coffeShopsData: ICoffeShop[]
 };
 
 export interface IUserState {
