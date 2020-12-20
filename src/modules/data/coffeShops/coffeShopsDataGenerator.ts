@@ -8,7 +8,7 @@ import { shopAssortGenerator } from "./shopAssortGenerator";
 export function coffeShopsDataGenerator(): ICoffeShop[] {
   const arr = [];
 
-  for (let i = 1; i <= randomMath(6, 10); i++) {
+  for (let i = 1; i <= randomMath(6, 9); i++) {
     arr.push({
       coffePreviewImage: previewsArr[Math.abs(i-5)],
       coffeOutsideImage: imagesArr[Math.abs(i-5)],

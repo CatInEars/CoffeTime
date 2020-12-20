@@ -17,7 +17,7 @@ export function Shop() {
   return (
     <ScrollView>
       <ShopBanner {...route.params} />
-      <DrinksList />
+      <DrinksList {...route.params} />
     </ScrollView>
   )
 }

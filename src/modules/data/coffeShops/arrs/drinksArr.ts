@@ -1,9 +1,11 @@
 import { IDrink } from '../../../../types/data/IDrink';
+import { coffePhotosArr } from './coffePhotosArr';
 
 export const drinksArr: IDrink[] = [
   {
     name: 'Cappuchino',
     type: 'кофейный напиток',
+    image: coffePhotosArr['Cappuchino'],
     price: 120,
     popular: true,
     favorite: false,
@@ -17,6 +19,7 @@ export const drinksArr: IDrink[] = [
   {
     name: 'Latte macchiato',
     type: 'кофейный напиток',
+    image: coffePhotosArr['Latte macchiato'],
     price: 149,
     popular: true,
     favorite: false,
@@ -30,6 +33,7 @@ export const drinksArr: IDrink[] = [
   {
     name: 'Americano',
     type: 'кофейный напиток',
+    image: coffePhotosArr['Americano'],
     price: 99,
     popular: false,
     favorite: false,
@@ -38,5 +42,33 @@ export const drinksArr: IDrink[] = [
       time: 140,
       temperature: 90
     }
-  }
+  },
+  {
+    name: 'Fredo',
+    type: 'кофейный напиток',
+    image: coffePhotosArr['Fredo'],
+    price: 249,
+    popular: false,
+    favorite: false,
+    structure: {
+      milk: 30,
+      coffe: 25,
+      time: 200,
+      temperature: 70
+    }
+  },
+  {
+    name: 'Glasse',
+    type: 'кофейное мороженное',
+    image: coffePhotosArr['Glasse'],
+    price: 199,
+    popular: true,
+    favorite: false,
+    structure: {
+      milk: 45,
+      coffe: 5,
+      time: 140,
+      temperature: 25
+    }
+  },
 ];

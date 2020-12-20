@@ -1,1 +1,1 @@
-export type ICoffeType = 'кофейный напиток'; 
+export type ICoffeType = 'кофейный напиток' | 'кофейное мороженное'; 

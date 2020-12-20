@@ -277,7 +277,6 @@ export const commonStyles = StyleSheet.create({
   },
   drinksContainer: {
     width: '100%',
-    height: 1000,
     paddingRight: 7,
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -288,7 +287,22 @@ export const commonStyles = StyleSheet.create({
     marginLeft: 7,
     width: screenWidth/2 - 14,
     height: 220,
-    backgroundColor: 'orange',
+    padding: 8
+  },
+  drinkName: {
+    fontFamily: 'SFUITextBold', 
+    fontSize: 16, 
+    color: '#717171',
+  },
+  drinkType: {
+    fontFamily: 'SFUITextRegular', 
+    fontSize: 12, 
+    color: '#717171',
+    marginTop: 2
+  },
+  drinkImage: {
+    width: '100%', 
+    height: 115,
   },
   _button: {
     width: 300,

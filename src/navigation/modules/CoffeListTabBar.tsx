@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useRef } from 'react';
-import { View, Animated } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { View, Animated, BackHandler } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { commonStyles } from '../../common/commonStyles';
 import { CoffeListTabIcon } from '../../core/svg/CoffeListTabIcon';
@@ -9,6 +9,26 @@ import { MapTabIcon } from '../../core/svg/MapTabIcon';
 export function CoffeListTabBar() {
   const navigation = useNavigation();
   const leftPosition = useRef(new Animated.Value(0)).current;
+  const [screenNow, setScreenNow] = useState('MapScreen'); 
+  
+  BackHandler.addEventListener('hardwareBackPress', () => {
+    if (navigation.isFocused()) {
+      const trigger = screenNow === 'MapScreen'; 
+      handleAnimate(trigger ? 0 : 1);
+      setScreenNow(trigger ? 'CoffeShopList' : 'MapScreen')
+    }
+    return null;
+  });
+
+  async function handleAnimate(toValue: number) {
+    setTimeout(() => {
+      Animated.timing(leftPosition, {
+        toValue: toValue,
+        duration: 180,
+        useNativeDriver: false
+      }).start();
+    }, 0)
+  }
 
   return (
     <View style={commonStyles.coffeTabNavigatorContainer}>
@@ -22,14 +42,9 @@ export function CoffeListTabBar() {
             borderBottomLeftRadius: 100
           }}
           onPress={() => {
-            setTimeout(() => {
-              Animated.timing(leftPosition, {
-                toValue: 0,
-                duration: 180,
-                useNativeDriver: false
-              }).start();
-            }, 0)
+            handleAnimate(0);
             navigation.navigate('MapScreen');
+            setScreenNow('CoffeShopList');
           }}
         >
           <MapTabIcon />
@@ -42,14 +57,9 @@ export function CoffeListTabBar() {
             borderBottomRightRadius: 100
           }}
           onPress={() => {
-            setTimeout(() => {
-              Animated.timing(leftPosition, {
-                toValue: 1,
-                duration: 180,
-                useNativeDriver: false
-              }).start();
-            }, 0)
+            handleAnimate(1);
             navigation.navigate('CoffeShopList');
+            setScreenNow('MapScreen');
           }}
         >
           <CoffeListTabIcon />

@@ -6,5 +6,5 @@ export interface ICoffeShop {
   name: string,
   address: string,
   id: number,
-  assortment?: IDrink[]
+  assortment: IDrink[]
 }
