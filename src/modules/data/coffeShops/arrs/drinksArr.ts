@@ -1,4 +1,5 @@
 import { IDrink } from '../../../../types/data/IDrink';
+import { randomMath } from '../../../others/randomMath';
 import { coffePhotosArr } from './coffePhotosArr';
 
 export const drinksArr: IDrink[] = [

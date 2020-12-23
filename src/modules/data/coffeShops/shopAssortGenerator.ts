@@ -4,7 +4,7 @@ import { drinksArr } from './arrs/drinksArr';
 
 export function shopAssortGenerator(): IDrink[] {
   const arr = [];
-  for (let i = 1; i <= randomMath(6, 10); i++) {
+  for (let i = 1; i <= randomMath(6, 8); i++) {
     arr.push(drinksArr[randomMath(0, drinksArr.length - 1)]);
   }
   return arr;

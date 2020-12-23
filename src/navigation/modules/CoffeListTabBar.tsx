@@ -20,7 +20,7 @@ export function CoffeListTabBar() {
     return null;
   });
 
-  async function handleAnimate(toValue: number) {
+  function handleAnimate(toValue: number) {
     setTimeout(() => {
       Animated.timing(leftPosition, {
         toValue: toValue,

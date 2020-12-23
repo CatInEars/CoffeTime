@@ -3,13 +3,14 @@ import { Image, Text, View } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
 import { randomMath } from '../../modules/others/randomMath';
 import { ICoffeShop } from '../../types/data/ICoffeShop';
+import { IDrink } from '../../types/data/IDrink';
+import { Heart } from '../svg/Heart';
 
 export function DrinksList({ assortment }: ICoffeShop) {
   return (
     <View style={commonStyles.drinksContainer}>
       {
         assortment.map((item, index) => (
-
           <View style={commonStyles.drinkBlock} key={index}>
             <Text style={commonStyles.drinkName}>{item.name}</Text>
             <Text style={commonStyles.drinkType}>{item.type}</Text>
@@ -25,8 +26,17 @@ export function DrinksList({ assortment }: ICoffeShop) {
               source={item.image[randomMath(0, item.image.length - 1)]} 
               style={commonStyles.drinkImage} 
             />
-          </View>
 
+            <View style={commonStyles.drinkBlockBottomInfo}>
+              <Text style={commonStyles.drinkPrice}>{item.price} ₽</Text>
+              {
+                item.favorite ?
+                  <Heart style={commonStyles.heartIcon} fill='gray' />
+                :
+                  <Heart style={commonStyles.heartIcon} fill='gray' />
+              }
+            </View>
+          </View>
         ))
       }
     </View>
