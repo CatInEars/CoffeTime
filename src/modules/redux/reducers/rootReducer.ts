@@ -23,6 +23,10 @@ export function rootReducer(state = initialState, action: IRootAction) {
         photo: action.photo
       }
     }
-  } 
+  } else if ( action.type === 'CHANGE_FAVORITE' ) {
+    state.coffeShopsData[action.shopIndex].assortment[action.drinkIndex].favorite 
+      = action.newValue
+    return state
+  }
   return state
 }

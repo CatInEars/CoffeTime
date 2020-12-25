@@ -3,10 +3,9 @@ import { Image, Text, View } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
 import { randomMath } from '../../modules/others/randomMath';
 import { ICoffeShop } from '../../types/data/ICoffeShop';
-import { IDrink } from '../../types/data/IDrink';
-import { Heart } from '../svg/Heart';
+import { HeartIcon } from '../../common/HeartIcon';
 
-export function DrinksList({ assortment }: ICoffeShop) {
+export function DrinksList({ assortment, id }: ICoffeShop) {
   return (
     <View style={commonStyles.drinksContainer}>
       {
@@ -15,26 +14,14 @@ export function DrinksList({ assortment }: ICoffeShop) {
             <Text style={commonStyles.drinkName}>{item.name}</Text>
             <Text style={commonStyles.drinkType}>{item.type}</Text>
 
-            {/*
-              Тут какая то дурка, честно, потратил полчаса, что бы понять почему  
-              у меня в исходный обьект не кладется рандомная пикча, так и не понял, 
-              но понял, что если на место image класть весь массив, то отсюда уже
-              иожно достать рандомную :(
-            */}
-
             <Image 
-              source={item.image[randomMath(0, item.image.length - 1)]} 
-              style={commonStyles.drinkImage} 
+              source={item.image} 
+              style={commonStyles.drinkImage}
             />
 
             <View style={commonStyles.drinkBlockBottomInfo}>
               <Text style={commonStyles.drinkPrice}>{item.price} ₽</Text>
-              {
-                item.favorite ?
-                  <Heart style={commonStyles.heartIcon} fill='gray' />
-                :
-                  <Heart style={commonStyles.heartIcon} fill='gray' />
-              }
+              <HeartIcon shopIndex={id} drinkIndex={index} />
             </View>
           </View>
         ))

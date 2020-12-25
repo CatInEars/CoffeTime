@@ -13,4 +13,11 @@ export interface IUserPhotoAction {
   photo: any
 }
 
-export type IRootAction = IUserNameAction | IUserLoginAction | IUserPhotoAction;
+export interface IChangeFavoriteAction {
+  type: 'CHANGE_FAVORITE',
+  shopIndex: number,
+  drinkIndex: number,
+  newValue: boolean
+}
+
+export type IRootAction = IUserNameAction | IUserLoginAction | IUserPhotoAction | IChangeFavoriteAction;

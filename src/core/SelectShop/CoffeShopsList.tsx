@@ -17,7 +17,7 @@ export function CoffeShopList() {
       >
         <FlatList 
           data={coffeShopsData}
-          renderItem={({item, index}) => <CoffePreview {...item} id={index + 1} />}
+          renderItem={({item, index}) => <CoffePreview {...item} id={index} />}
           keyExtractor={(_, index) => index.toString()}
         />
       </ScrollView>
