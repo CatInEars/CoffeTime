@@ -331,6 +331,10 @@ export const commonStyles = StyleSheet.create({
     width: '100%',
     height: '100%'
   },
+  backButton: {
+    position: 'absolute', 
+    left: 0
+  },
   _button: {
     width: 300,
     height: 52,

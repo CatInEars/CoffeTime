@@ -12,12 +12,8 @@ export function CoffeListTabBar() {
   const [screenNow, setScreenNow] = useState('MapScreen'); 
   
   BackHandler.addEventListener('hardwareBackPress', () => {
-    if (navigation.isFocused()) {
-      const trigger = screenNow === 'MapScreen'; 
-      handleAnimate(trigger ? 0 : 1);
-      setScreenNow(trigger ? 'CoffeShopList' : 'MapScreen')
-    }
-    return null;
+    alert('Jeasas')
+    return null
   });
 
   function handleAnimate(toValue: number) {

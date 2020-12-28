@@ -13,9 +13,7 @@ export function CoffeAppNavigation() {
   
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: () => <CoffeTimeStackHeader />,
-      // TODO
-      // headerLeft: () => <HeaderBackButton />,
+      headerTitle: () => <CoffeTimeStackHeader />
     })
   }, []);
 
