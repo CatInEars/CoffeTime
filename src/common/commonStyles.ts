@@ -321,9 +321,15 @@ export const commonStyles = StyleSheet.create({
     fontSize: 24,
     marginTop: 6
   },
+  heartIconContainer: {
+    width: 33, 
+    height: 33,
+    justifyContent: 'center', 
+    alignItems: 'center'
+  },
   heartIcon: {
-    width: 30,
-    height: 30,
+    width: '100%',
+    height: '100%'
   },
   _button: {
     width: 300,

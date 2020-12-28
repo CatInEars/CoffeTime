@@ -1,9 +1,8 @@
 import React from 'react';
 import { Image, Text, View } from 'react-native';
 import { commonStyles } from '../../common/commonStyles';
-import { randomMath } from '../../modules/others/randomMath';
 import { ICoffeShop } from '../../types/data/ICoffeShop';
-import { HeartIcon } from '../../common/HeartIcon';
+import { HeartIcon } from './HeartIcon';
 
 export function DrinksList({ assortment, id }: ICoffeShop) {
   return (

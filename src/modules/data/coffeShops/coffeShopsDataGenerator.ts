@@ -6,7 +6,7 @@ import { imagesArr, previewsArr } from "./arrs/imagesArrs";
 import { shopAssortGenerator } from "./shopAssortGenerator";
 
 export function coffeShopsDataGenerator(): ICoffeShop[] {
-  const arr = [];
+  const arr: ICoffeShop[] = [];
 
   for (let i = 1; i <= randomMath(6, 9); i++) {
     arr.push({
