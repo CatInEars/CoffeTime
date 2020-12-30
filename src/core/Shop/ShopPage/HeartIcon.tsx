@@ -2,12 +2,12 @@ import React, { useRef, useState } from 'react';
 import { TouchableWithoutFeedback, Animated, View } from 'react-native';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { HeartActive } from '../svg/HeartActive';
-import { HeartEmpty } from '../svg/HeartEmpty';
-import { ICoffeShop } from '../../types/data/ICoffeShop';
-import { IChangeFavoriteAction } from '../../types/redux/actions';
-import { IAppState } from '../../types/redux/state/IAppState';
-import { commonStyles } from '../../common/commonStyles';
+import { HeartActive } from '../../svg/HeartActive';
+import { HeartEmpty } from '../../svg/HeartEmpty';
+import { ICoffeShop } from '../../../types/data/ICoffeShop';
+import { IChangeFavoriteAction } from '../../../types/redux/actions';
+import { IAppState } from '../../../types/redux/state/IAppState';
+import { commonStyles } from '../../../common/commonStyles';
 
 interface IProps {
   shopIndex: number,

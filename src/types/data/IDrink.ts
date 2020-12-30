@@ -12,5 +12,6 @@ export interface IDrink {
     coffe?: number,
     time: number,
     temperature: number
-  }
+  },
+  description: string
 }

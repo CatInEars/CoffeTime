@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Switch, Image } from 'react-native';
-import { commonStyles } from '../../common/commonStyles';
+import { commonStyles } from '../../../common/commonStyles';
 import { LinearGradient } from 'expo-linear-gradient';
-import { ICoffeShop } from '../../types/data/ICoffeShop';
+import { ICoffeShop } from '../../../types/data/ICoffeShop';
 
 export function ShopBanner({ coffeOutsideImage, name, address }: ICoffeShop) {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -17,7 +17,14 @@ export function ShopBanner({ coffeOutsideImage, name, address }: ICoffeShop) {
           style={{...commonStyles.linearGradient, opacity: 1, height: 310}}
         >
 
-          <Image source={coffeOutsideImage} style={commonStyles.shopImage} />
+          <Image 
+            source={coffeOutsideImage} 
+            style={{
+              ...commonStyles._banerImage,
+              position: 'absolute', 
+              zIndex: -1
+            }} 
+          />
 
         </LinearGradient>
 

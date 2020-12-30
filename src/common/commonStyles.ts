@@ -246,12 +246,6 @@ export const commonStyles = StyleSheet.create({
     color: '#BBBBBB', 
     fontSize: 14
   },
-  shopImage: {
-    width: '100%', 
-    height: 310, 
-    position: 'absolute', 
-    zIndex: -1
-  },
   shopBannerContainer: {
     width: '100%', 
     height: 310
@@ -335,16 +329,61 @@ export const commonStyles = StyleSheet.create({
     position: 'absolute', 
     left: 0
   },
+  drinkScreenContainer: {
+    backgroundColor: 'white'
+  },
+  drinkScreenInfoContainer: {
+    padding: 22, 
+    height: screenHeight - 370,
+    position: 'relative'
+  },
+  drinkScreenName: {
+    fontFamily: 'LobsterRegular',
+    fontSize: 28,
+    color: '#474747'
+  },
+  drinkScreenDescription: {
+    fontFamily: 'SFUITextLight',
+    color: '#474747',
+    fontSize: 18
+  },
+  drinkScreenBuyContainer: {
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'space-around',
+    top: 200,
+  },
+  drinkScreenPrice: {
+    fontFamily: 'SFUITextRegular',
+    fontSize: 28,
+    color: '#717171'
+  },
+  drinkScreenButton: {
+    width: 210, 
+    height: 45, 
+    backgroundColor: normalButtonColor, 
+    justifyContent: 'center', 
+    alignItems: 'center'
+  },
+  drinkScreenButtonText: {
+    color: 'white',
+    fontSize: 20,
+    fontFamily: 'SFUITextRegular'
+  },
   _button: {
     width: 300,
     height: 52,
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: normalButtonColor,
+    backgroundColor: normalButtonColor
   },
   _buttonText: {
     color: 'white',
     fontSize: 18
+  },
+  _banerImage: {
+    width: '100%', 
+    height: 310
   }
 });

@@ -1,6 +1,8 @@
 import { IDrink } from '../../../../types/data/IDrink';
 import { coffePhotosArr } from './coffePhotosArr';
 
+const description = 'Итальянский эспрессо – это бархатистая плотная пенка с золотистым отливом, покрывающая всю поверхность кофе. Из Италии с любовью.'
+
 export const drinksArr: IDrink[] = [
   {
     name: 'Cappuchino',
@@ -14,7 +16,8 @@ export const drinksArr: IDrink[] = [
       coffe: 25,
       time: 156,
       temperature: 95
-    }
+    },
+    description
   },
   {
     name: 'Latte macchiato',
@@ -28,7 +31,8 @@ export const drinksArr: IDrink[] = [
       coffe: 25,
       time: 180,
       temperature: 90
-    }
+    },
+    description
   },
   {
     name: 'Americano',
@@ -41,7 +45,8 @@ export const drinksArr: IDrink[] = [
       coffe: 35,
       time: 140,
       temperature: 90
-    }
+    },
+    description
   },
   {
     name: 'Fredo',
@@ -55,7 +60,8 @@ export const drinksArr: IDrink[] = [
       coffe: 25,
       time: 200,
       temperature: 70
-    }
+    },
+    description
   },
   {
     name: 'Glasse',
@@ -69,6 +75,7 @@ export const drinksArr: IDrink[] = [
       coffe: 5,
       time: 140,
       temperature: 25
-    }
+    },
+    description
   },
 ];
