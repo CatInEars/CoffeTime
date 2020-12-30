@@ -24,7 +24,7 @@ export const drinksArr: IDrink[] = [
     type: 'кофейный напиток',
     image: coffePhotosArr['Latte macchiato'],
     price: 149,
-    popular: true,
+    popular: false,
     favorite: false,
     structure: {
       milk: 20,

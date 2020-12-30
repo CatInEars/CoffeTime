@@ -4,6 +4,7 @@ import { View, Image, Text, TouchableHighlight } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { commonStyles } from '../../../common/commonStyles';
 import { IDrink } from '../../../types/data/IDrink';
+import { Popular } from './Popular';
 
 interface IRoute {
   key: any,
@@ -17,6 +18,13 @@ export function DrinkPage() {
 
   return (
     <ScrollView style={commonStyles.drinkScreenContainer}>
+      {
+        drinkItem.popular ?
+          <Popular />
+        :
+          null
+      }
+
       <Image 
         source={drinkItem.image} 
         style={{
@@ -24,6 +32,7 @@ export function DrinkPage() {
           resizeMode: 'center'
         }}
       />
+
 
       <View style={commonStyles.drinkScreenInfoContainer}>
         <Text style={commonStyles.drinkScreenName}>
