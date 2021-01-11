@@ -337,6 +337,10 @@ export const commonStyles = StyleSheet.create({
     height: screenHeight - 370,
     position: 'relative'
   },
+  drinkScreenTopContainer: {
+    flexDirection: 'row', 
+    alignItems: 'center'
+  },
   drinkScreenName: {
     fontFamily: 'LobsterRegular',
     fontSize: 28,
@@ -369,6 +373,12 @@ export const commonStyles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     fontFamily: 'SFUITextRegular'
+  },
+  drinkScreenHeartIcon: {
+    width: 20,
+    height: 20,
+    marginLeft: 12,
+    marginTop: 4
   },
   _button: {
     width: 300,
