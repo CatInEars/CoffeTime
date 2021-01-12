@@ -5,6 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { commonStyles } from '../../../common/commonStyles';
 import { IDrink } from '../../../types/data/IDrink';
 import { HeartActive } from '../../svg/HeartActive';
+import { DrinkStructure } from './DrinkStructure';
 import { Popular } from './Popular';
 
 interface IRoute {
@@ -36,21 +37,22 @@ export function DrinkPage() {
 
 
       <View style={commonStyles.drinkScreenInfoContainer}>
-        <View style={commonStyles.drinkScreenTopContainer}>
-          <Text style={commonStyles.drinkScreenName}>
-            {drinkItem.name}
-          </Text>
 
-          {
-            drinkItem.favorite ?
-              <HeartActive style={{
-                ...commonStyles.heartIcon,
-                ...commonStyles.drinkScreenHeartIcon
-              }} />
-            :
-              null
-          }
-        </View>
+        <DrinkStructure structure={drinkItem.structure} />
+        
+        <Text style={commonStyles.drinkScreenName}>
+          {drinkItem.name}
+        </Text>
+
+        {
+          drinkItem.favorite ?
+            <HeartActive style={{
+              ...commonStyles.heartIcon,
+              ...commonStyles.drinkScreenHeartIcon
+            }} />
+          :
+            null
+        }
 
         <Text style={commonStyles.drinkScreenDescription}>
           {drinkItem.description}
@@ -63,7 +65,9 @@ export function DrinkPage() {
             <Text style={commonStyles.drinkScreenButtonText}>заказать</Text>
           </TouchableHighlight>
         </View>
+        
       </View>
+
     </ScrollView>
   );
 }

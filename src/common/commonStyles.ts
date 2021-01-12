@@ -330,16 +330,12 @@ export const commonStyles = StyleSheet.create({
     left: 0
   },
   drinkScreenContainer: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    height: screenHeight - 50
   },
   drinkScreenInfoContainer: {
-    padding: 22, 
     height: screenHeight - 370,
-    position: 'relative'
-  },
-  drinkScreenTopContainer: {
-    flexDirection: 'row', 
-    alignItems: 'center'
+    padding: 22
   },
   drinkScreenName: {
     fontFamily: 'LobsterRegular',
@@ -349,13 +345,16 @@ export const commonStyles = StyleSheet.create({
   drinkScreenDescription: {
     fontFamily: 'SFUITextLight',
     color: '#474747',
-    fontSize: 18
+    fontSize: 18,
   },
   drinkScreenBuyContainer: {
     flexDirection: 'row', 
     alignItems: 'center', 
     justifyContent: 'space-around',
-    top: 200,
+    position: 'absolute',
+    left: 22,
+    bottom: 10,
+    width: '100%'
   },
   drinkScreenPrice: {
     fontFamily: 'SFUITextRegular',
@@ -379,6 +378,13 @@ export const commonStyles = StyleSheet.create({
     height: 20,
     marginLeft: 12,
     marginTop: 4
+  },
+  drinkScreenStructureContainer: {
+    flexDirection: 'row'
+  },
+  drinkScreenStructureIcon: {
+    width: 23,
+    height: 23
   },
   _button: {
     width: 300,

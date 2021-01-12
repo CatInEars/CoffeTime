@@ -1,4 +1,5 @@
 import { ICoffeType } from "./ICoffeType";
+import { IStructure } from "./IStructure";
 
 export interface IDrink {
   name: string,
@@ -7,11 +8,6 @@ export interface IDrink {
   price: number,
   popular: boolean,
   favorite: boolean,
-  structure: {
-    milk?: number,
-    coffe?: number,
-    time: number,
-    temperature: number
-  },
+  structure: IStructure,
   description: string
 }
