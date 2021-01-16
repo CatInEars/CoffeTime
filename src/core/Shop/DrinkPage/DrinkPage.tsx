@@ -19,7 +19,7 @@ export function DrinkPage() {
   const { params: drinkItem }: IRoute = useRoute();
 
   return (
-    <ScrollView style={commonStyles.drinkScreenContainer}>
+    <View style={commonStyles.drinkScreenContainer}>
       {
         drinkItem.popular ?
           <Popular />
@@ -40,34 +40,35 @@ export function DrinkPage() {
 
         <DrinkStructure structure={drinkItem.structure} />
         
-        <Text style={commonStyles.drinkScreenName}>
-          {drinkItem.name}
-        </Text>
+        <View style={commonStyles.drinkScreenNameContainer}>
+          <Text style={commonStyles.drinkScreenName}>
+            {drinkItem.name}
+          </Text>
 
-        {
-          drinkItem.favorite ?
-            <HeartActive style={{
-              ...commonStyles.heartIcon,
-              ...commonStyles.drinkScreenHeartIcon
-            }} />
-          :
-            null
-        }
+          {
+            drinkItem.favorite ?
+              <HeartActive style={{
+                ...commonStyles.heartIcon,
+                ...commonStyles.drinkScreenHeartIcon
+              }} />
+            :
+              null
+          }
+        </View>
 
         <Text style={commonStyles.drinkScreenDescription}>
           {drinkItem.description}
         </Text>
-
-        <View style={commonStyles.drinkScreenBuyContainer}>
-          <Text style={commonStyles.drinkScreenPrice}>{drinkItem.price} ₽</Text>
-
-          <TouchableHighlight style={commonStyles.drinkScreenButton}>
-            <Text style={commonStyles.drinkScreenButtonText}>заказать</Text>
-          </TouchableHighlight>
-        </View>
-        
       </View>
 
-    </ScrollView>
+      <View style={commonStyles.drinkScreenBuyContainer}>
+        <Text style={commonStyles.drinkScreenPrice}>{drinkItem.price} ₽</Text>
+
+        <TouchableHighlight style={commonStyles.drinkScreenButton}>
+          <Text style={commonStyles.drinkScreenButtonText}>заказать</Text>
+        </TouchableHighlight>
+      </View>
+
+    </View>
   );
 }

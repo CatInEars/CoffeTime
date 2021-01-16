@@ -330,12 +330,15 @@ export const commonStyles = StyleSheet.create({
     left: 0
   },
   drinkScreenContainer: {
-    backgroundColor: 'white',
-    height: screenHeight - 50
+    height: '100%',
+    backgroundColor: 'white'
   },
   drinkScreenInfoContainer: {
-    height: screenHeight - 370,
     padding: 22
+  },
+  drinkScreenNameContainer: {
+    flexDirection: 'row', 	
+    alignItems: 'center'
   },
   drinkScreenName: {
     fontFamily: 'LobsterRegular',
@@ -377,7 +380,7 @@ export const commonStyles = StyleSheet.create({
     width: 20,
     height: 20,
     marginLeft: 12,
-    marginTop: 4
+    marginTop: 6
   },
   drinkScreenStructureContainer: {
     flexDirection: 'row'
