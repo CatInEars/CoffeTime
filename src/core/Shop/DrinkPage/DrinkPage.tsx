@@ -1,7 +1,6 @@
 import { useRoute } from '@react-navigation/native';
 import React from 'react';
 import { View, Image, Text, TouchableHighlight } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
 import { commonStyles } from '../../../common/commonStyles';
 import { IDrink } from '../../../types/data/IDrink';
 import { HeartActive } from '../../svg/HeartActive';

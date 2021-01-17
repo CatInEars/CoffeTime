@@ -404,5 +404,13 @@ export const commonStyles = StyleSheet.create({
   _banerImage: {
     width: '100%', 
     height: 310
+  },
+  _structureContainer: {
+    marginRight: 18,
+    alignItems: 'center'
+  },
+  _structureItem: {
+    padding: 10,
+    borderRadius: 100
   }
 });

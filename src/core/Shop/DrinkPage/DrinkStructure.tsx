@@ -1,7 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { commonStyles } from '../../../common/commonStyles';
+import { structureBGCObj } from '../../../modules/data/coffeShops/objs/structureBGCObj';
 import { IStructure } from '../../../types/data/IStructure';
 import { CoffeBeans } from '../../svg/DrinkComponents/CoffeBeans';
 import { Milk } from '../../svg/DrinkComponents/Milk';
@@ -26,34 +27,79 @@ export function DrinkStructure({ structure }: IProps) {
               
               if ( key === 'milk' ) {
                 arr.push(
-                  <Milk
-                    style={commonStyles.drinkScreenStructureIcon}
-                    key={index}
-                  />
+                  <View key={index} style={commonStyles._structureContainer}>
+                    <View
+                      style={
+                        {
+                          ...commonStyles._structureItem,
+                          backgroundColor: structureBGCObj[key]
+                        }
+                      }
+                    >
+                      <Milk
+                        style={commonStyles.drinkScreenStructureIcon}
+                      />
+                    </View>
+                    <Text>{item[key]}мл</Text>
+                  </View>
                 );
   
               } else if ( key === 'coffe') {
                 arr.push(
-                  <CoffeBeans
-                    style={commonStyles.drinkScreenStructureIcon}
-                    key={index + 1}
-                  />
+                  <View key={index + 1} style={commonStyles._structureContainer}>
+                    <View 
+                      style={
+                        {
+                          ...commonStyles._structureItem,
+                          backgroundColor: structureBGCObj[key]
+                        }
+                      }
+                    >
+                      <CoffeBeans
+                        style={commonStyles.drinkScreenStructureIcon}
+                      />
+                    </View>
+                    <Text>{item[key]}%</Text>
+                  </View>
                 );
   
               } else if ( key === 'time') {
                 arr.push(
-                  <Time
-                    style={commonStyles.drinkScreenStructureIcon}
-                    key={index + 2}
-                  />
+                  <View key={index + 2} style={commonStyles._structureContainer}>
+                    <View 
+                      style={
+                        {
+                          ...commonStyles._structureItem,
+                          backgroundColor: structureBGCObj[key]
+                        }
+                      }
+                    >
+                      <Time
+                        style={commonStyles.drinkScreenStructureIcon}
+                      />
+                    </View>
+                    <Text>{item[key]}</Text>
+                  </View>
                 );
   
               } else if ( key === 'temperature') {
                 arr.push(
-                  <Temperature
-                    style={commonStyles.drinkScreenStructureIcon}
-                    key={index + 3}
-                  />
+                  <View key={index + 3} style={commonStyles._structureContainer}>
+                    <View 
+                      style={
+                        {
+                          ...commonStyles._structureItem,
+                          backgroundColor: structureBGCObj[key]
+                        }
+                      }
+                    >
+                      <Temperature
+                        style={commonStyles.drinkScreenStructureIcon}
+
+                      />
+                    </View>
+                    <Text>{item[key]} °C</Text>
+                  </View>
                 );
   
               } else {
