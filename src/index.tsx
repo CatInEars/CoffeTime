@@ -28,14 +28,11 @@ function app({ userIsLogin }: IProps) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* {
+        {
           userIsLogin ?
             <Stack.Screen name='CoffeAppNavigation' component={CoffeAppNavigation} />
           :
             <Stack.Screen name='Welcome' component={WelcomeScreen} />
-        } */}
-        {
-          <Stack.Screen name='CoffeAppNavigation' component={CoffeAppNavigation} />
         }
       </Stack.Navigator>
     </NavigationContainer>
@@ -47,6 +44,3 @@ export const App = connect(
     userIsLogin: state.login
   }),
 )(app);
-
-// TODO 
-// npm remove safe-area-view
