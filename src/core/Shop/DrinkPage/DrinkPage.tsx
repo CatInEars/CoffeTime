@@ -1,6 +1,6 @@
 import { useRoute } from '@react-navigation/native';
 import React from 'react';
-import { View, Image, Text, TouchableHighlight } from 'react-native';
+import { View, Image, Text, TouchableHighlight, ToastAndroid } from 'react-native';
 import { commonStyles } from '../../../common/commonStyles';
 import { IDrink } from '../../../types/data/IDrink';
 import { HeartActive } from '../../svg/HeartActive';
@@ -16,6 +16,10 @@ interface IRoute {
 export function DrinkPage() {
 
   const { params: drinkItem }: IRoute = useRoute();
+
+  function handlePress(): void {
+    ToastAndroid.show('Ну купил, и что?', ToastAndroid.SHORT)
+  }
 
   return (
     <View style={commonStyles.drinkScreenContainer}>
@@ -63,7 +67,10 @@ export function DrinkPage() {
       <View style={commonStyles.drinkScreenBuyContainer}>
         <Text style={commonStyles.drinkScreenPrice}>{drinkItem.price} ₽</Text>
 
-        <TouchableHighlight style={commonStyles.drinkScreenButton}>
+        <TouchableHighlight 
+          style={commonStyles.drinkScreenButton} 
+          onPress={handlePress}
+        >
           <Text style={commonStyles.drinkScreenButtonText}>заказать</Text>
         </TouchableHighlight>
       </View>

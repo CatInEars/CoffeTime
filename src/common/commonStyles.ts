@@ -62,6 +62,10 @@ export const commonStyles = StyleSheet.create({
     alignItems: 'center',
     position: 'absolute'
   },
+  hideKeyboardContainer: {
+    width: screenWidth,
+    height: screenHeight / 2,
+  },
   buttonSwiperTextLineContainer: {
     position: 'absolute',
     alignItems: 'center',
