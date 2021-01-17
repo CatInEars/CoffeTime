@@ -37,11 +37,11 @@ export function ShopBanner({ coffeOutsideImage, name, address }: ICoffeShop) {
           </View>
 
           <Switch
-            trackColor={{ false: "#767577", true: "#81b0ff" }}
-            thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-            ios_backgroundColor="#3e3e3e"
+            trackColor={{ false: "white", true: "white" }}
+            thumbColor={isEnabled ? "#EEEEEE" : "#E66A6A"}
             onValueChange={toggleSwitch}
             value={isEnabled}
+            
           />
 
         </View>

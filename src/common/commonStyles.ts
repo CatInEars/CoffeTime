@@ -355,9 +355,8 @@ export const commonStyles = StyleSheet.create({
     alignItems: 'center', 
     justifyContent: 'space-around',
     position: 'absolute',
-    left: 22,
     bottom: 10,
-    width: '100%'
+    width: '100%',
   },
   drinkScreenPrice: {
     fontFamily: 'SFUITextRegular',
