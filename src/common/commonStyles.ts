@@ -341,6 +341,7 @@ export const commonStyles = StyleSheet.create({
     padding: 22
   },
   drinkScreenNameContainer: {
+    marginTop: 12,
     flexDirection: 'row', 	
     alignItems: 'center'
   },
@@ -406,7 +407,7 @@ export const commonStyles = StyleSheet.create({
   },
   _banerImage: {
     width: '100%', 
-    height: 310
+    height: '35%'
   },
   _structureContainer: {
     marginRight: 18,

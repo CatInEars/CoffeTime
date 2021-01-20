@@ -6,12 +6,15 @@ import { WelcomeScreen } from './navigation/WelcomeScreen';
 import { IAppState } from './types/redux/state/IAppState';
 import { connect } from 'react-redux';
 import { CoffeAppNavigation } from './navigation/CoffeAppNavigation';
+import { LogBox } from 'react-native';
 
 const Stack = createStackNavigator();
+LogBox.ignoreLogs(["The action 'GO_BACK' was not"]);
 
 interface IProps {
   userIsLogin: boolean
 }
+
 
 function app({ userIsLogin }: IProps) {
   const [loaded] = useFonts({
